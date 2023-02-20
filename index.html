@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Netflix clone</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/" class="logo">
+                <svg viewBox="0 0 111 30" data-uia="netflix-logo" class="svg-icon svg-icon-netflix-logo"
+                    aria-hidden="true" focusable="false">
+                    <g id="netflix-logo">
+                        <path
+                            d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"
+                            id="Fill-14"></path>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div>
+            <div class="select">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                    <path
+                        d="M16.555 5.412a8.028 8.028 0 00-3.503-2.81 14.899 14.899 0 011.663 4.472 8.547 8.547 0 001.84-1.662zM13.326 7.825a13.43 13.43 0 00-2.413-5.773 8.087 8.087 0 00-1.826 0 13.43 13.43 0 00-2.413 5.773A8.473 8.473 0 0010 8.5c1.18 0 2.304-.24 3.326-.675zM6.514 9.376A9.98 9.98 0 0010 10c1.226 0 2.4-.22 3.486-.624a13.54 13.54 0 01-.351 3.759A13.54 13.54 0 0110 13.5c-1.079 0-2.128-.127-3.134-.366a13.538 13.538 0 01-.352-3.758zM5.285 7.074a14.9 14.9 0 011.663-4.471 8.028 8.028 0 00-3.503 2.81c.529.638 1.149 1.199 1.84 1.66zM17.334 6.798a7.973 7.973 0 01.614 4.115 13.47 13.47 0 01-3.178 1.72 15.093 15.093 0 00.174-3.939 10.043 10.043 0 002.39-1.896zM2.666 6.798a10.042 10.042 0 002.39 1.896 15.196 15.196 0 00.174 3.94 13.472 13.472 0 01-3.178-1.72 7.973 7.973 0 01.615-4.115zM10 15c.898 0 1.778-.079 2.633-.23a13.473 13.473 0 01-1.72 3.178 8.099 8.099 0 01-1.826 0 13.47 13.47 0 01-1.72-3.178c.855.151 1.735.23 2.633.23zM14.357 14.357a14.912 14.912 0 01-1.305 3.04 8.027 8.027 0 004.345-4.345c-.953.542-1.971.981-3.04 1.305zM6.948 17.397a8.027 8.027 0 01-4.345-4.345c.953.542 1.971.981 3.04 1.305a14.912 14.912 0 001.305 3.04z" />
+                </svg>
+                <select>
+                    <option>Tiếng Việt</option>
+                    <option>English</option>
+                </select>
+            </div>
+            <a href="/#" class="login">Đăng nhập</a>
+        </div>
+    </header>
+    <div class="splash cta">
+        <div class="background">
+            <img src="https://assets.nflxext.com/ffe/siteui/vlv3/83e8c151-107d-4e8f-b95a-d2ba99d49bb9/ec1ff19e-93ee-4d36-91ee-acfc3187971b/VN-vi-20230213-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+                srcset="https://assets.nflxext.com/ffe/siteui/vlv3/83e8c151-107d-4e8f-b95a-d2ba99d49bb9/ec1ff19e-93ee-4d36-91ee-acfc3187971b/VN-vi-20230213-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/83e8c151-107d-4e8f-b95a-d2ba99d49bb9/ec1ff19e-93ee-4d36-91ee-acfc3187971b/VN-vi-20230213-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/83e8c151-107d-4e8f-b95a-d2ba99d49bb9/ec1ff19e-93ee-4d36-91ee-acfc3187971b/VN-vi-20230213-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w"
+                alt="background">
+            <div class="gradient"></div>
+        </div>
+        <div class="content">
+            <div>
+                <h1>Chương trình truyền hình, phim không giới hạn và nhiều nội dung khác.</h1>
+                <h2>Xem ở mọi nơi. Hủy bất kỳ lúc nào.</h2>
+                <h3>Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.</h3>
+                <form>
+                    <div>
+                        <input type="text">
+                        <span>Địa chỉ email</span>
+                    </div>
+                    <div>
+                        <button>Bắt đầu &gt;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="texts">
+            <h1>Tải xuống nội dung để xem ngoại tuyến.</h1>
+            <p>Lưu lại những nội dung yêu thích một cách dễ dàng và luôn có thứ để xem.</p>
+        </div>
+        <div class="media s1">
+            <div>
+                <img alt="deco" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png">
+                <video data-uia="our-story-card-video" autoplay="" playsinline="" muted="" loop="">
+                    <source
+                        src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+                        type="video/mp4">
+                </video>
+            </div>
+    </section>
+    <section>
+        <div class="texts">
+            <h1>Thưởng thức trên TV của bạn.</h1>
+            <p>Xem trên TV thông minh, Playstation, Xbox, Chromecast, Apple TV, đầu phát Blu-ray và nhiều thiết bị khác.
+            </p>
+        </div>
+        <div class="media s2">
+            <img alt="deco"
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg">
+            <div class="download">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
+                    alt="deco">
+                <div class="title">
+                    <div class="text0">Cậu bé mất tích</div>
+                    <div class="text1">Đang tải xuống...</div>
+                </div>
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"
+                    alt="">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="texts">
+            <h1>Xem ở mọi nơi.</h1>
+            <p>Phát trực tuyến không giới hạn phim và chương trình truyền hình trên điện thoại, máy tính bảng, máy tính
+                xách tay và TV.
+            </p>
+        </div>
+        <div class="media s3">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-vn.png"
+                alt="">
+            <video class="our-story-card-video mtz-vlc-dpfdi" data-uia="our-story-card-video" autoplay="" playsinline=""
+                muted="" loop="">
+                <source
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-vn.m4v"
+                    type="video/mp4">
+            </video>
+        </div>
+    </section>
+    <section class="last">
+        <div class="texts">
+            <h1>Tạo hồ sơ cho trẻ em.</h1>
+            <p>Đưa các em vào những cuộc phiêu lưu với nhân vật được yêu thích trong một không gian riêng. Tính năng này
+                đi kèm miễn phí với tư cách thành viên của bạn.
+            </p>
+        </div>
+        <div class="media">
+            <img src="https://occ-0-325-64.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABbtRHxTEgmwtFXR4vBnwSO9UzWSascscH0PRpGcXYVkyVez31FciwrQ4bmD41KIrsypJG4Bf54yOJL82SDLL54SGCIdZov0ySklR.png?r=df6"
+                alt="">
+        </div>
+    </section>
+    <div class="faq cta">
+        <h1>Câu hỏi thường gặp</h1>
+        <div class="questions">
+            <div class="question">
+                <input type="checkbox" id="q1">
+                <label class="header" for="q1">
+                    Netflix là gì?
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
+                <div class="answer">
+                    Netflix là dịch vụ phát trực tuyến mang đến đa dạng các loại chương trình truyền hình, phim, anime,
+                    phim tài liệu đoạt giải thưởng và nhiều nội dung khác trên hàng nghìn thiết bị có kết nối Internet.
+
+                    Bạn có thể xem bao nhiêu tùy thích, bất cứ lúc nào bạn muốn mà không gặp phải một quảng cáo nào –
+                    tất cả chỉ với một mức giá thấp hàng tháng. Luôn có những nội dung mới để bạn khám phá và những
+                    chương trình truyền hình, phim mới được bổ sung mỗi tuần!
+                </div>
+            </div>
+            <div class="question">
+                <input type="checkbox" id="q2">
+                <label class="header" for="q2">
+                    Tôi phải trả bao nhiêu tiền để xem Netflix?
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
+                <div class="answer">
+                    Xem Netflix trên điện thoại thông minh, máy tính bảng, TV thông minh, máy tính xách tay hoặc thiết
+                    bị phát trực tuyến, chỉ với một khoản phí cố định hàng tháng. Các gói dịch vụ với mức giá từ 70.000
+                    ₫ đến 260.000 ₫ mỗi tháng. Không phụ phí, không hợp đồng.
+                </div>
+            </div>
+            <div class="question">
+                <input type="checkbox" id="q3">
+                <label class="header" for="q3">
+                    Tôi có thể xem ở đâu?
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
+                <div class="answer">
+                    Xem mọi lúc, mọi nơi. Đăng nhập bằng tài khoản Netflix của bạn để xem ngay trên trang web
+                    netflix.com từ máy tính cá nhân, hoặc trên bất kỳ thiết bị nào có kết nối Internet và có cài đặt ứng
+                    dụng Netflix, bao gồm TV thông minh, điện thoại thông minh, máy tính bảng, thiết bị phát đa phương
+                    tiện trực tuyến và máy chơi game.
+
+                    Bạn cũng có thể tải xuống các chương trình yêu thích bằng ứng dụng trên iOS, Android hoặc Windows
+                    10. Vào phần nội dung đã tải xuống để xem trong khi di chuyển và khi không có kết nối Internet. Mang
+                    Netflix theo bạn đến mọi nơi.
+                </div>
+            </div>
+            <div class="question">
+                <input type="checkbox" id="q4">
+                <label class="header" for="q4">
+                    Làm thế nào để hủy?
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
+                <div class="answer">
+                    Netflix rất linh hoạt. Không có hợp đồng phiền toái, không ràng buộc. Bạn có thể dễ dàng hủy tài
+                    khoản trực tuyến chỉ trong hai cú nhấp chuột. Không mất phí hủy – bạn có thể bắt đầu hoặc ngừng tài
+                    khoản bất cứ lúc nào.
+                </div>
+            </div>
+            <div class="question">
+                <input type="checkbox" id="q5">
+                <label class="header" for="q5">
+                    Tôi có thể xem gì trên Netflix?
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
+                <div class="answer">
+                    Netflix có một thư viện phong phú gồm các phim truyện, phim tài liệu, chương trình truyền hình,
+                    anime, tác phẩm giành giải thưởng của Netflix và nhiều nội dung khác. Xem không giới hạn bất cứ lúc
+                    nào bạn muốn.
+                </div>
+            </div>
+            <div class="question">
+                <input type="checkbox" id="q6">
+                <label class="header" for="q6">
+                    Netflix có phù hợp cho trẻ em không?
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
+                <div class="answer">
+                    Trải nghiệm Netflix Trẻ em có sẵn trong gói dịch vụ của bạn, trao cho phụ huynh quyền kiểm soát
+                    trong khi các em có thể thưởng thức các bộ phim và chương trình phù hợp cho gia đình tại không gian
+                    riêng.
+
+                    Hồ sơ Trẻ em đi kèm tính năng kiểm soát của cha mẹ (được bảo vệ bằng mã PIN), cho phép bạn giới hạn
+                    độ tuổi cho nội dung con mình được phép xem, cũng như chặn những phim hoặc chương trình mà bạn không
+                    muốn các em nhìn thấy.
+                </div>
+            </div>
+        </div>
+        <h3>Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.</h3>
+        <div class="form">
+            <form>
+                <div>
+                    <input type="text">
+                    <span>Địa chỉ email</span>
+                </div>
+                <div>
+                    <button>Bắt đầu &gt;</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
